@@ -1,0 +1,86 @@
+@charset "utf-8";
+#top {
+	font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", monospace;
+	font-style: normal;
+	font-size: 60px;
+	text-align: center;
+	width: 800px;
+	color: rgba(0,0,0,1.00);
+	background-color: rgba(106,106,106,0.3);
+	height: auto;
+}
+#center {
+	width: 800px;
+	background-color: rgba(255,255,255,0.46);
+	height: auto;
+	margin-top: 50px;
+}
+#bottom {
+	width: 800px;
+	height: 100px;
+	background-color: rgba(154,154,154,0.9);
+	float: left;
+	margin-top: 10px;
+}
+#all {
+	width: 1000px;
+	padding-left: 200px;
+	position: absolute;
+	left: 50%;
+	margin-left: -600px;
+	background-color: rgba(255,255,255,1);
+	
+}
+#left{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	
+	width: 600px;
+	height: 100px;
+	background-color: rgba(154,154,154,0.3);
+	float: left;
+	font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", monospace;
+	font-style: normal;
+	font-size: 60px;
+	font-weight: bold;
+	text-align: center;
+}
+#img{
+	width: 800px;
+	height: 150px;
+	font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", monospace;
+	font-weight: bold;
+	text-align: center;
+	font-size: 30px;
+}
+#info{
+	font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", monospace;
+	font-style: normal;
+	font-size: 60px;
+	width: 800px;
+	float: left;
+	text-align: center;
+	margin-top: 40px;
+	font-weight: bold;
+}
+
+#right{
+	margin-bottom: 10px;
+	margin-top: 10px;
+	height: 100px;
+	width: 190px;
+	background-color: rgba(154,154,154,0.3);
+	float: right;
+	font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", monospace;
+	font-style: normal;
+	font-size: 60px;
+	font-weight: bold;
+	text-align: center;
+}
+
+#LL{
+	width: 800px;
+	height: 200px;
+	background-color: rgba(232,255,0,0.3);
+	float: right;
+}
