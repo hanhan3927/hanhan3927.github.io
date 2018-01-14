@@ -1,0 +1,63 @@
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+<style type="text/css">
+#Box2,#Box3,#Box4{
+    width:350px;
+    height:500px;
+    padding:10px;
+    border:1px #ccc dashed;
+    float:left;
+    margin-right:10px;
+}
+</style>
+
+<script type="text/javascript">
+
+    var sheep_1=12;
+    var sheep_2=0;
+    var sheep_3=0;
+
+    function AllowDrop(event){
+        event.preventDefault();
+    }
+    function Drag(event){
+        event.dataTransfer.setData("text",event.currentTarget.id);
+    }
+    function Drop(event){
+        
+        event.preventDefault();
+        var data=event.dataTransfer.getData("text");
+        event.currentTarget.appendChild(document.getElementById(data));
+    }
+    function dragEnd1(event) {sheep_1++;print();}
+    function dragEnd2(event) {sheep_2++;print();}
+    function dragEnd3(event) {sheep_3++;print();}
+    function dragStart1(event) {sheep_1--;print();}
+    function dragStart2(event) {sheep_2--;print();}
+    function dragStart3(event) {sheep_3--;print();}
+    function print(){ 
+        var absn=Math.abs(parseInt(sheep_2)-parseInt(sheep_3));
+        document.getElementById("ans").innerHTML = ("全部有"+sheep_1+"羊 甲有"+sheep_2+"羊 乙有"+sheep_3+"羊 相差"+absn);
+    }
+
+    print();
+
+</script>
+
+<div id="Box2" ondrop="Drop(event)" ondragstart="dragStart1(event)" ondragend="dragEnd1(event)" ondragover="AllowDrop(event)">
+<img id="Img1" src="sheep.jpg"  width="110" height="110" draggable="true" ondragstart="Drag(event)">
+<img id="Img2" src="sheep.jpg"  width="110" height="110" draggable="true" ondragstart="Drag(event)">
+<img id="Img3" src="sheep.jpg"  width="110" height="110" draggable="true" ondragstart="Drag(event)">
+<img id="Img4" src="sheep.jpg"  width="110" height="110" draggable="true" ondragstart="Drag(event)">
+<img id="Img5" src="sheep.jpg"  width="110" height="110" draggable="true" ondragstart="Drag(event)">
+<img id="Img6" src="sheep.jpg"  width="110" height="110" draggable="true" ondragstart="Drag(event)">
+<img id="Img7" src="sheep.jpg"  width="110" height="110" draggable="true" ondragstart="Drag(event)">
+<img id="Img8" src="sheep.jpg"  width="110" height="110" draggable="true" ondragstart="Drag(event)">
+<img id="Img9" src="sheep.jpg"  width="110" height="110" draggable="true" ondragstart="Drag(event)">
+<img id="Img10" src="sheep.jpg"  width="110" height="110" draggable="true" ondragstart="Drag(event)">
+<img id="Img11" src="sheep.jpg"  width="110" height="110" draggable="true" ondragstart="Drag(event)">
+<img id="Img12" src="sheep.jpg"  width="110" height="110" draggable="true" ondragstart="Drag(event)">
+</div>
+<div id="Box3" ondrop="Drop(event)" ondragstart="dragStart2(event)" ondragend="dragEnd2(event)" ondragover="AllowDrop(event)"></div>
+<div id="Box4" ondrop="Drop(event)" ondragstart="dragStart3(event)" ondragend="dragEnd3(event)" ondragover="AllowDrop(event)"></div>
+<p id="ans"> </p>
+<div style="clear:both;"></div>
